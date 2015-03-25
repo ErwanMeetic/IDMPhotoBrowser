@@ -30,6 +30,9 @@
 // Properties
 @property (nonatomic, strong) id <IDMPhotoBrowserDelegate> delegate;
 
+// Buttons
+@property (nonatomic, strong) UIButton *doneButton;
+
 // Toolbar customization
 @property (nonatomic) BOOL displayToolbar;
 @property (nonatomic) BOOL displayCounterLabel;
@@ -80,4 +83,6 @@
 // Get IDMPhoto at index
 - (id<IDMPhoto>)photoAtIndex:(NSUInteger)index;
 
+- (NSUInteger)numberOfPhotos;
+- (CGPoint)contentOffsetForPageAtIndex:(NSUInteger)index;
 @end
