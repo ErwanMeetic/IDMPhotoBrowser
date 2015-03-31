@@ -28,7 +28,7 @@
 @interface IDMPhotoBrowser : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate> 
 
 // Properties
-@property (nonatomic, strong) id <IDMPhotoBrowserDelegate> delegate;
+@property (nonatomic, weak) id <IDMPhotoBrowserDelegate> delegate;
 
 // Buttons
 @property (nonatomic, strong) UIButton *doneButton;
@@ -47,11 +47,8 @@
 @property (nonatomic) BOOL useWhiteBackgroundColor;
 @property (nonatomic, weak) UIImage *doneButtonImage;
 @property (nonatomic, weak) UIColor *trackTintColor, *progressTintColor;
-
 @property (nonatomic, weak) UIImage *scaleImage;
-
 @property (nonatomic) BOOL arrowButtonsChangePhotosAnimated;
-
 @property (nonatomic) BOOL forceHideStatusBar;
 @property (nonatomic) BOOL usePopAnimation;
 @property (nonatomic) BOOL disableVerticalSwipe;
